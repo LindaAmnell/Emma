@@ -1,24 +1,27 @@
-const fs = require("fs");
+// const fs = require("fs");
 
-function readInput() {
-  const args = process.argv.slice(2);
-  if (args.length > 0) {
-    return args.join(" ");
-  }
+const input = document.querySelector(".input-hej");
+const button = document.querySelector("#btn");
 
-  const data = fs.readFileSync(0, "utf8");
-  return data.replace(/\r?\n/g, " ");
-}
+// function readInput() {
+//   const args = process.argv.slice(2);
+//   if (args.length > 0) {
+//     return args.join(" ");
+//   }
 
-function splitIntoWords(text) {
-  // TODO: handle multiple spaces, punctuation, and case normalization.
-  return text.split(" ");
-}
+//   const data = fs.readFileSync(0, "utf8");
+//   return data.replace(/\r?\n/g, " ");
+// }
 
-function countUnique(words) {
-  // TODO: ignore empty tokens and handle case-insensitive counting.
-  return new Set(words).size;
-}
+// function splitIntoWords(text) {
+//   // TODO: handle multiple spaces, punctuation, and case normalization.
+//   return text.split(" ");
+// }
+
+// function countUnique(words) {
+//   // TODO: ignore empty tokens and handle case-insensitive counting.
+//   return new Set(words).size;
+// }
 
 function main() {
   //   const text = readInput();
@@ -41,7 +44,13 @@ function main() {
   console.log("THE");
   console.log("BEST!!!");
 
-  //   const input = document.createElement("input");
+  button.addEventListener("click", () => {
+    console.log("hej");
+    if (input.value === "") {
+      alert("fill in input");
+      return;
+    }
+  });
 }
 
 main();
