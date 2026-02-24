@@ -1,7 +1,8 @@
 // const fs = require("fs");
 
-const input = document.querySelector(".input-hej");
+const inputhej = document.querySelector(".input-hej");
 const button = document.querySelector("#btn");
+const p = document.querySelector(".info");
 
 // function readInput() {
 //   const args = process.argv.slice(2);
@@ -46,10 +47,12 @@ function main() {
 
   button.addEventListener("click", () => {
     console.log("hej");
-    if (input.value === "") {
+    if (inputhej.value === "") {
       alert("fill in input");
       return;
     }
+
+    p.innerText = inputhej.value.toLowerCase();
   });
 }
 
