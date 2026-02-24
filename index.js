@@ -36,6 +36,10 @@ function main() {
 
   console.log(f1Teams);
   console.log("F1");
+  console.log("WE");
+  console.log("ARE");
+  console.log("THE");
+  console.log("BEST!!!");
 
   //   const input = document.createElement("input");
 }
