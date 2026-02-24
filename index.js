@@ -35,6 +35,7 @@ function main() {
   f1Teams.sort();
 
   console.log(f1Teams);
+  console.log("F1");
 
   //   const input = document.createElement("input");
 }
