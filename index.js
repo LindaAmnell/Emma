@@ -1,18 +1,18 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function readInput() {
   const args = process.argv.slice(2);
   if (args.length > 0) {
-    return args.join(' ');
+    return args.join(" ");
   }
 
-  const data = fs.readFileSync(0, 'utf8');
-  return data.replace(/\r?\n/g, ' ');
+  const data = fs.readFileSync(0, "utf8");
+  return data.replace(/\r?\n/g, " ");
 }
 
 function splitIntoWords(text) {
   // TODO: handle multiple spaces, punctuation, and case normalization.
-  return text.split(' ');
+  return text.split(" ");
 }
 
 function countUnique(words) {
@@ -21,14 +21,28 @@ function countUnique(words) {
 }
 
 function main() {
-  const text = readInput();
-  const words = splitIntoWords(text);
+  //   const text = readInput();
 
-  const totalWords = words.length;
-  const uniqueWords = countUnique(words);
+  let f1Teams = [
+    "Ferrari",
+    "MacLaren",
+    "Cadillac",
+    "Red Bull",
+    "Williams",
+    "Mercedes",
+  ];
 
-  console.log(`Total words: ${totalWords}`);
-  console.log(`Unique words: ${uniqueWords}`);
+  f1Teams.sort();
+
+  console.log(f1Teams);
+
+  //   const words = splitIntoWords(text);
+
+  //   const totalWords = words.length;
+  //   const uniqueWords = countUnique(words);
+
+  //   console.log(`Total words: ${totalWords}`);
+  //   console.log(`Unique words: ${uniqueWords}`);
 }
 
 main();
