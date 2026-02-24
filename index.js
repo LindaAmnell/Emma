@@ -36,13 +36,7 @@ function main() {
 
   console.log(f1Teams);
 
-  //   const words = splitIntoWords(text);
-
-  //   const totalWords = words.length;
-  //   const uniqueWords = countUnique(words);
-
-  //   console.log(`Total words: ${totalWords}`);
-  //   console.log(`Unique words: ${uniqueWords}`);
+  //   const input = document.createElement("input");
 }
 
 main();
